@@ -5,9 +5,9 @@ import paho.mqtt.client
 import paho.mqtt.client as mqtt
 
 COMMANDS = {
-    "open": b"Q1QQ00QFF0F1QF0F0F0F",
-    "close": b"Q1QQ00QFF0F1QF0F0101",
-    "stop": b"Q1QQ00QFF0F1QF0FFFFF",
+    b"open": b"Q1QQ00QFF0F1QF0F0F0F",
+    b"close": b"Q1QQ00QFF0F1QF0F0101",
+    b"stop": b"Q1QQ00QFF0F1QF0FFFFF",
 }
 
 
