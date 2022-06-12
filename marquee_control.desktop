@@ -1,0 +1,6 @@
+# ~/.config/autostart/marquee_control.desktop
+
+[Desktop Entry]
+Name=Marquee Control
+Type=Application
+Exec=/home/pi/homeautomation-marquee-control/marquee_control.sh
