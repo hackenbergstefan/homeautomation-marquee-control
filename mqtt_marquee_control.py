@@ -18,8 +18,10 @@ def on_message(client: paho.mqtt.client.Client, userdata, message: paho.mqtt.cli
 
 
 def main(host="192.168.1.2", topic="marquee"):
-    client = mqtt.Client()
+    client = mqtt.Client(client_id="marquee_controller", clean_session=False)
     client.on_message = on_message
+    client.on_disconnect = lambda client, userdata, rc: print("Disconnect", rc, client, userdata)
+    client.on_connect = lambda client, userdata, flags, rc: print("Connect", rc, client, userdata, flags)
 
     while True:
         try:
